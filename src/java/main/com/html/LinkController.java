@@ -77,7 +77,8 @@ public class LinkController {
 				if (flag == 0)
 					flag = 1;
 				// Files.write(Paths.get("link.txt"), linkList);
-				saveLink.fileWriter(linkList);
+				if (linkList.size() > 0)
+					saveLink.fileWriter(linkList);
 				linkList.removeAll(linkList);
 				String name = tempLinkList.get(0); // Clear the previous link
 				tempLinkList.remove(tempLinkList.get(0));

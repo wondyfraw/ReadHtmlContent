@@ -13,8 +13,10 @@ public class SaveLink {
 			FileWriter fw = new FileWriter("link.txt", true);
 			BufferedWriter bw = new BufferedWriter(fw);
 			PrintWriter out = new PrintWriter(bw);
-			for (int i = 0; i < linkList.size(); i++) {
-				out.println(linkList.get(i));
+			if (linkList.size() > 0) {
+				for (int i = 0; i < linkList.size(); i++) {
+					out.println(linkList.get(i));
+				}
 			}
 			out.close();
 		} catch (IOException e) {
